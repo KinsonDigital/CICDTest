@@ -1,4 +1,4 @@
-name: ✅Build Status Check
+name: ✅Unit Test Status Check
 
 
 defaults:
@@ -15,16 +15,15 @@ on:
       - release/v*.*.*
       - master
 
-
 jobs:
   build_project:
-    name: Build Project
+    name: ubuntu-latest
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Restore DotNet Tools
       run: dotnet tool restore
-    - name: Run Build Status Check
-      run: dotnet cicd BuildStatusCheck
+    - name: Run Unit Test Status Check
+      run: dotnet cicd UnitTestStatusCheck
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
