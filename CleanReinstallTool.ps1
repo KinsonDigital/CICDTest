@@ -11,21 +11,12 @@ $projectDirPath = "$solutionDirPath/$projectName";
 $projectFilePath = "$projectDirPath/$projectFileName";
 $packageDirPath = "$PSScriptRoot/cicd-package";
 
-$configPath = "$PSScriptRoot/.config";
-
 # Delete the cached nuget package tool
 $nugetCacheFilePath = "C:/Users/$env:UserName/.nuget/packages/$packageName";
 if (Test-Path -Path $nugetCacheFilePath)
 {
     Remove-Item -Path $nugetCacheFilePath -Force -Recurse -Confirm:$false;
     Write-Host "✅Globally cached dotnet tool nuget package deleted`n";
-}
-
-# Delete the dotnet tool manifest if it exists
-if (Test-Path -Path $configPath)
-{
-    Remove-Item -Path $configPath -Force -Recurse -Confirm:$false;
-    Write-Host "✅DotNet tool manifest deleted`n";
 }
 
 # Delete all nuget pacakges
@@ -46,7 +37,7 @@ Write-Host "✅$projectName NuGet package '$packageName' created`n";
 
 # Create the dotnet tool manifest
 dotnet new tool-manifest --force
-Write-Host "✅DotNet Tool Manifest Restored`n";
+Write-Host "✅DotNet Tool Manifest Created`n";
 
 [string[]]$packages = Get-ChildItem -Path "$packageDirPath/*.nupkg" | ForEach-Object { $_.Name };
 
