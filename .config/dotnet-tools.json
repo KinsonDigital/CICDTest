@@ -3,7 +3,7 @@
   "isRoot": true,
   "tools": {
     "kinsondigital.cicd": {
-      "version": "1.0.0-preview.3",
+      "version": "1.0.0-preview.6",
       "commands": [
         "cicd"
       ]
