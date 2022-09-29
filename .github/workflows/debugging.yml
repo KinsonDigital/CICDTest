@@ -27,3 +27,8 @@ jobs:
       run: dotnet cicd DebugTask
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Run Build Status Check
+      run: dotnet cicd PRBuildStatusCheck
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
