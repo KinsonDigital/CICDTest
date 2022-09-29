@@ -1,14 +1,6 @@
 $packageName = "KinsonDigital.CICD";
 $packageDirPath = "$PSScriptRoot/cicd-package";
 
-# Delete all nuget pacakges
-if (Test-Path -Path $packageDirPath)
-{
-    # Delete all nuget packages
-    Remove-Item -Path "$packageDirPath" -Recurse -Confirm:$false;
-    Write-Host "✅All NuGet packages deleted`n";
-}
-
 # Create the dotnet tool manifest
 dotnet new tool-manifest --force
 Write-Host "✅DotNet Tool Manifest Created`n";
