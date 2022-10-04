@@ -7,7 +7,6 @@ defaults:
 
 
 on:
-  workflow_dispatch:
   pull_request:
 
 
@@ -24,8 +23,19 @@ jobs:
     - name: Restore DotNet Tools
       run: dotnet tool restore
 
+    - name: Get Pull Request Number
+      id: get-pr-number
+      run: |
+        # refs/pull/<pr_number>/merge
+
+        $pullRequestNumber = "${{ github.ref }}".Replace("refs/pull/", "").Replace("/merge", "");
+
+        Write-Host "Pull Request Number: $pullRequestNumber";
+
+        Write-Host "::set-output name=pr-number::$pullRequestNumber";
+
     - name: Run Debugging Workflow
-      run: dotnet cicd DebugTask
+      run: dotnet cicd DebugTask --pull-request-number ${{ steps.get-pr-number.pr-number }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
