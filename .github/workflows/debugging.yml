@@ -35,7 +35,7 @@ jobs:
         Write-Host "::set-output name=pr-number::$pullRequestNumber";
 
     - name: Run Debugging Workflow
-      run: dotnet cicd DebugTask --pull-request-number ${{ steps.get-pr-number.pr-number }}
+      run: dotnet cicd DebugTask --pull-request-number ${{ steps.get-pr-number.outputs.pr-number }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
