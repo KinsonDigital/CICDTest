@@ -26,12 +26,8 @@ jobs:
     - name: Get Pull Request Number
       id: get-pr-number
       run: |
-        # refs/pull/<pr_number>/merge
-
         $pullRequestNumber = "${{ github.ref }}".Replace("refs/pull/", "").Replace("/merge", "");
-
         Write-Host "Pull Request Number: $pullRequestNumber";
-
         Write-Host "::set-output name=pr-number::$pullRequestNumber";
 
     - name: Run Debugging Workflow
