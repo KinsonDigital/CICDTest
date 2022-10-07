@@ -20,6 +20,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: ReInstall DotNet Tool
+      run: ../../InstallTool.ps1
+
     - name: Restore DotNet Tools
       run: dotnet tool restore
 
