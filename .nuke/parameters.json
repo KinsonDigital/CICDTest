@@ -3,8 +3,5 @@
   "Solution": "CICDTest.sln",
   "RepoOwner": "KinsonDigital",
   "RepoName": "CICDTest",
-  "ProjectName": "CICDTest",
-  "ReleaseNotesBaseDirPath": "ReleaseNotes",
-  "PreviewReleaseNotesDirName": "PreviewNotes",
-  "ProductionReleaseNotesDirName": "ProductionNotes"
+  "ProjectName": "CICDTest"
 }
