@@ -17,6 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Opt Out Of NUKE Telemetry
+      run: $env:NUKE_TELEMETRY_OPTOUT = 1
+
     - name: ReInstall DotNet Tool
       run: ../../InstallTool.ps1
 
