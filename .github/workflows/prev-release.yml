@@ -17,12 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Opt Out Of NUKE Telemetry
-      run: |
-        $env:NUKE_TELEMETRY_OPTOUT = "true";
-        $value = $env:NUKE_TELEMETRY_OPTOUT;
-        Write-Host "Telemetry Value: $value";
-
     - name: ReInstall DotNet Tool
       run: ../../InstallTool.ps1
 
@@ -33,8 +27,8 @@ jobs:
       run: dotnet cicd PreviewRelease
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # NugetOrgApiKey: ${{ secrets.NUGET_ORG_API_KEY }}
-        # TwitterConsumerApiKey: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
-        # TwitterConsumerApiSecret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
-        # TwitterAccessToken: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-        # TwitterAccessTokenSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        NugetOrgApiKey: ${{ secrets.NUGET_ORG_API_KEY }}
+        TwitterConsumerApiKey: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+        TwitterConsumerApiSecret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+        TwitterAccessToken: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        TwitterAccessTokenSecret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
