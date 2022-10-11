@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 		.github\workflows\prod-release-pr-status-check.yml = .github\workflows\prod-release-pr-status-check.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{292ECF93-3623-4EC9-90BD-869D68AD69E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CICDTestTests", "Testing\CICDTestTests\CICDTestTests.csproj", "{354A8BB5-AF58-4ED4-B6C9-42D7A96D2FF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,8 +33,13 @@ Global
 		{0EB5AEF0-B864-405F-A1A9-48394190E985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EB5AEF0-B864-405F-A1A9-48394190E985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EB5AEF0-B864-405F-A1A9-48394190E985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354A8BB5-AF58-4ED4-B6C9-42D7A96D2FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354A8BB5-AF58-4ED4-B6C9-42D7A96D2FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354A8BB5-AF58-4ED4-B6C9-42D7A96D2FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354A8BB5-AF58-4ED4-B6C9-42D7A96D2FF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5295E29F-610D-4EF9-8381-00D0C41F067C} = {2C77B691-4E93-4363-BE2E-D9F55EE5A8DB}
+		{354A8BB5-AF58-4ED4-B6C9-42D7A96D2FF0} = {292ECF93-3623-4EC9-90BD-869D68AD69E1}
 	EndGlobalSection
 EndGlobal
