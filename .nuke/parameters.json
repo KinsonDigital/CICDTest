@@ -1,0 +1,7 @@
+{
+  "$schema": "./build.schema.json",
+  "Solution": "CICDTest.sln",
+  "RepoOwner": "KinsonDigital",
+  "RepoName": "CICDTest",
+  "ProjectName": "CICDTest"
+}
