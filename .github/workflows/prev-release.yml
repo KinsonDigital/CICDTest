@@ -19,7 +19,7 @@ jobs:
 
     - name: Opt Out Of NUKE Telemetry
       run: |
-        $env:NUKE_TELEMETRY_OPTOUT = "1";
+        $env:NUKE_TELEMETRY_OPTOUT = "true";
         $value = $env:NUKE_TELEMETRY_OPTOUT;
         Write-Host "Telemetry Value: $value";
 
