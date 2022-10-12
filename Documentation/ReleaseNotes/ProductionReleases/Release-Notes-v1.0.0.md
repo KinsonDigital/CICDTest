@@ -30,4 +30,4 @@
 
 <h2 style="font-weight:bold" align="center">Preview Releases 🚀</h2>
 
-1. [v1.0.0-preview.1](https://github.com/KinsonDigital/CICDTest/milestone/1)
+1. [Preview Release v1.0.0-preview.1](https://github.com/KinsonDigital/CICDTest/milestone/1)
