@@ -1,5 +1,5 @@
 <h1 align="center" style='color:mediumseagreen;font-weight:bold'>
-    CICD Production Release Notes - v1.0.0
+    CICDTest Production Release Notes - v1.0.0
 </h1>
 
 <h2 style="font-weight:bold" align="center">New Features✨</h2>
