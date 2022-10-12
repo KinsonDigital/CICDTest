@@ -25,3 +25,9 @@
 
 <h2 style="font-weight:bold" align="center">Other 🪧</h2>
 <h5 align="center">(Includes anything that does not fit into the categories above)</h5>
+
+---
+
+<h2 style="font-weight:bold" align="center">Preview Releases 🚀</h2>
+
+1. [v1.0.0-preview.1](https://github.com/KinsonDigital/CICDTest/milestone/1)
