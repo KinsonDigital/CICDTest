@@ -33,7 +33,7 @@ jobs:
         Write-Host "Pull Request Number: $pullRequestNumber";
         Write-Host "::set-output name=pr-number::$pullRequestNumber";
 
-    - name: Run Build Status Check
+    - name: Run Hot Fix PR Status Check
       run: dotnet cicd HotFixPRStatusCheck --pull-request-number ${{ steps.get-pr-number.outputs.pr-number }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
