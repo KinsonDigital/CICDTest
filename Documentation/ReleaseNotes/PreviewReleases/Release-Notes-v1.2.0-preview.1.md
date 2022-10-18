@@ -13,4 +13,4 @@ As with all software, there is always a chance for issues and bugs, especially f
 
 <h2 style="font-weight:bold" align="center">New Features ✨</h2>
 
-1. [#13](https://github.com/KinsonDigital/CICDTest) - Implement stuff
+1. [#13](https://github.com/KinsonDigital/CICDTest/issues/13) - Implement stuff
