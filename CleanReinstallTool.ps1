@@ -1,7 +1,7 @@
 Clear-Host;
 
 
-$baseSoftwareDevDirPath = "K:\SOFTWARE DEVELOPMENT";
+$baseSoftwareDevDirPath = "K:\SOFTWARE-DEV";
 $personalSoftware = "PERSONAL";
 $projectName = "CICD";
 $projectFileName = "$projectName.csproj";
